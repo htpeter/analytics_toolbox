@@ -20,7 +20,7 @@ import psycopg2
 import psycopg2.extras as extras
 import pandas as pd
 
-from . import s3funcs
+from analytics_toolbox import s3funcs
 
 class LocalLog(object):
     """
