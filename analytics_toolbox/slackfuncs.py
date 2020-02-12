@@ -40,6 +40,3 @@ def users_dataframe(client):
         data.append(user)
     return pd.DataFrame(data)
 
-if __name__ == '__main__':
-    bot = BotUser()
-    users = users_dataframe(bot.client)
