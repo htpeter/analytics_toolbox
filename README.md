@@ -1,36 +1,47 @@
-# Analytics Toolbox
+# analytics_toolbox
+> A toolbox for Analytics and Research.
 
-## The Main Use Cases
 
-### Importing 
+## Install
+
+`pip install analytics_toolbox`
+
+## [Documentation](https://htpeter.github.io/analytics_toolbox/)
+
+
+## Help With Postges Connection Setup
+
+### Step 1. Formatting Your Database Config Files
+
+For example, you have the following `config.ini` file.
+```
+[dev_db]
+hostname = dev.yourhost.com
+port = 5432
+database = dbname 
+user = htpeter
+
+[prod_db]
+hostname = prod.yourhost.com
+port = 5432
+database = dbname 
+user = htpeter
+```
+
+### Step 2. Ensuring you have .pgpass setup
+
+You don't pass passwords to `analytics_toolbox` in its current form. Instead it leverages [pgpass](https://www.postgresql.org/docs/9.3/libpq-pgpass.html). Simply paste a record for each database in a text file `~/.pgpass` with the following information.
 
 ```
+hostname:port:database:username:password
+```
+
+When `psycopg2` or even `psql` attempt to connect to a server, it will look in this file and if it finds matching server information, it will use that password.
+
+Ensure you limit the permissions on this file using `chmod 600 ~/.pgpass`
+
+## Usage Examples
+
+```python
 import analytics_toolbox as atb
 ```
-
-## Development
-
-I'm not sure if I want additional help at the moment but if you really want to work with this codebase you can Fork or make a PR. I hope you find value in it. I apologize for my oftentimes odd implementations.
-
-### Want To Develop? Here Are Our Goals
-
-Oftentimes, the efficent data loading, saving, or transformation solution isn't available to you because you have limited time and limited skills. Instead you select something good enough. This projects main goal is to **create a toolkit that helps the user make above average decisions because they are easy.** 
-
-Some examples of this that the API already handles are
-
-1. Keeping multiple database connections efficent and organized.
-2. Saving and loading data to S3 efficently. 
-3. Loading large amounts of data to servers with limited resoources in a flexible and efficent way. 
-
-#### Use `conda` to create the `atb-dev` environment
-
-This repository uses `conda` as its environment manager.
-`conda env create -f environment.yml`
-
-##### If you add a dependency, update  `environment.yml` 
-
-`conda env update --prefix ./env --file environment.yml  --prune`
-
-##### clean notebooks before push
-
-`nbdev_clean_nbs`

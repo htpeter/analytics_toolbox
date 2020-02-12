@@ -37,7 +37,37 @@ summary: "A toolbox for Analytics and Research."
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-To-Use-analytics_toolbox-aka-atb">How To Use <code>analytics_toolbox</code> aka <code>atb</code><a class="anchor-link" href="#How-To-Use-analytics_toolbox-aka-atb">&#182;</a></h2>
+<h2 id="Documentation"><a href="https://htpeter.github.io/analytics_toolbox/">Documentation</a><a class="anchor-link" href="#Documentation">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Help-With-Postges-Connection-Setup">Help With Postges Connection Setup<a class="anchor-link" href="#Help-With-Postges-Connection-Setup">&#182;</a></h2><h3 id="Step-1.-Formatting-Your-Database-Config-Files">Step 1. Formatting Your Database Config Files<a class="anchor-link" href="#Step-1.-Formatting-Your-Database-Config-Files">&#182;</a></h3><p>For example, you have the following <code>config.ini</code> file.</p>
+
+<pre><code>[dev_db]
+hostname = dev.yourhost.com
+port = 5432
+database = dbname 
+user = htpeter
+
+[prod_db]
+hostname = prod.yourhost.com
+port = 5432
+database = dbname 
+user = htpeter</code></pre>
+<h3 id="Step-2.-Ensuring-you-have-.pgpass-setup">Step 2. Ensuring you have .pgpass setup<a class="anchor-link" href="#Step-2.-Ensuring-you-have-.pgpass-setup">&#182;</a></h3><p>You don't pass passwords to <code>analytics_toolbox</code> in its current form. Instead it leverages <a href="https://www.postgresql.org/docs/9.3/libpq-pgpass.html">pgpass</a>. Simply paste a record for each database in a text file <code>~/.pgpass</code> with the following information.</p>
+
+<pre><code>hostname:port:database:username:password</code></pre>
+<p>When <code>psycopg2</code> or even <code>psql</code> attempt to connect to a server, it will look in this file and if it finds matching server information, it will use that password.</p>
+<p>Ensure you limit the permissions on this file using <code>chmod 600 ~/.pgpass</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Usage-Examples">Usage Examples<a class="anchor-link" href="#Usage-Examples">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -50,44 +80,6 @@ summary: "A toolbox for Analytics and Research."
 </pre></div>
 
     </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">atb</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[&#39;__builtins__&#39;,
- &#39;__cached__&#39;,
- &#39;__doc__&#39;,
- &#39;__file__&#39;,
- &#39;__loader__&#39;,
- &#39;__name__&#39;,
- &#39;__package__&#39;,
- &#39;__path__&#39;,
- &#39;__spec__&#39;,
- &#39;core&#39;]</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 

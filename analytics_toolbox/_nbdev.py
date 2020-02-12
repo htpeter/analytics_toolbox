@@ -22,7 +22,7 @@ modules = ["connector.py",
            "slackfuncs.py",
            "helpers.py"]
 
-doc_url = "https://htpeter.github.io/analytics_toolbox//analytics_toolbox/"
+doc_url = "https://htpeter.github.io/analytics_toolbox/analytics_toolbox/"
 
 git_url = "https://github.com/htpeter/analytics_toolbox/tree/master/"
 
