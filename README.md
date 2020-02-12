@@ -31,3 +31,6 @@ This repository uses `conda` as its environment manager.
 
 `conda env update --prefix ./env --file environment.yml  --prune`
 
+##### clean notebooks before push
+
+`nbdev_clean_nbs`
