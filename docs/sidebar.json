@@ -1,6 +1,8 @@
 {
   "analytics_toolbox": {
     "Overview": "/",
-    "Title": "/helpers"
+    "Title": "/helpers",
+    "`logtools` Log important information for debugging and meta-analysis.": "/logtools",
+    "`slackfuncs` ": "/slackfuncs"
   }
 }

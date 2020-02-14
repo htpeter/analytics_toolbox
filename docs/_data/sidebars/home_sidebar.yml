@@ -12,6 +12,12 @@ entries:
     - output: web,pdf
       title: Title
       url: /helpers
+    - output: web,pdf
+      title: '`logtools` Log important information for debugging and meta-analysis.'
+      url: /logtools
+    - output: web,pdf
+      title: '`slackfuncs` '
+      url: /slackfuncs
     output: web
     title: analytics_toolbox
   output: web

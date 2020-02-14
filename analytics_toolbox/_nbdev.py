@@ -2,24 +2,32 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"LocalLog": "01_connector.ipynb",
-         "StreamLog": "01_connector.ipynb",
-         "DBConnector": "01_connector.ipynb",
+index = {"DBConnector": "01_connector.ipynb",
          "DatabaseConnection": "01_connector.ipynb",
          "move_table": "01_connector.ipynb",
-         "current_datetime_dict": "01_connector.ipynb",
          "NativeTemplateEnvironment": "01_connector.ipynb",
-         "check_if_creds_exist": "10__s3funcs.ipynb",
-         "S3Bucket": "10__s3funcs.ipynb",
-         "BotUser": "11_slackfuncs.ipynb",
-         "users_dataframe": "11_slackfuncs.ipynb",
+         "BaseLog": "03_logtools.ipynb",
+         "LOGNAME": "03_logtools.ipynb",
+         "FileLog": "03_logtools.ipynb",
+         "LocalLog": "03_logtools.ipynb",
+         "StreamLog": "03_logtools.ipynb",
+         "logfile_to_df": "03_logtools.ipynb",
+         "check_if_creds_exist": "10_s3funcs.ipynb",
+         "S3Bucket": "10_s3funcs.ipynb",
+         "SlackClient": "11_slackfuncs.ipynb",
          "ENDPOINT": "11_slackfuncs.ipynb",
+         "users_dataframe": "11_slackfuncs.ipynb",
+         "add_slack_user_ids_to_message": "11_slackfuncs.ipynb",
          "get_str_var_names": "99_helpers.ipynb",
-         "open_and_run": "99_helpers.ipynb"}
+         "open_and_run": "99_helpers.ipynb",
+         "current_datetime_dict": "99_helpers.ipynb"}
 
-modules = ["connector.py",
+modules = ["db.py",
+           "connector.py",
+           "logtools.py",
            "s3funcs.py",
            "slackfuncs.py",
+           "__init__.py",
            "helpers.py"]
 
 doc_url = "https://htpeter.github.io/analytics_toolbox/analytics_toolbox/"
