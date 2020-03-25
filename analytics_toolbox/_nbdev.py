@@ -2,7 +2,10 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"DBConnector": "01_connector.ipynb",
+index = {"DatabaseConnection": "01_connector.ipynb",
+         "DBConnector": "01_connector.ipynb",
+         "move_table": "01_connector.ipynb",
+         "NativeTemplateEnvironment": "01_connector.ipynb",
          "BaseLog": "03_logtools.ipynb",
          "LOGNAME": "03_logtools.ipynb",
          "FileLog": "03_logtools.ipynb",
